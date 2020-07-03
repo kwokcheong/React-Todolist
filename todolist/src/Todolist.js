@@ -25,11 +25,21 @@ class Todolist extends Component{
         });
     }
 
+    deleteTodo = i => {
+        let todoscopy = this.state.todos.slice();
+
+        todoscopy.splice(i,1);
+
+        this.setState({
+            todos: todoscopy
+        });
+    }
+
     render() {
 
         let bulletedtodos = this.state.todos.map((e,i) =>{
             return (
-                <li key={i}>{e}</li>
+                <li key={i}>{e}<button onClick={() => this.deleteTodo(i)} >X</button></li>
             );
         });
 
