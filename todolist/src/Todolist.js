@@ -1,5 +1,7 @@
 import React, {Component} from 'react'; 
 
+import SingleTodo from "./SingleTodo"
+
 class Todolist extends Component{
     constructor(){
         super();
@@ -39,7 +41,8 @@ class Todolist extends Component{
 
         let bulletedtodos = this.state.todos.map((e,i) =>{
             return (
-                <li key={i}>{e}<button style={{margin: "20px"}} onClick={() => this.deleteTodo(i)} >X</button></li>
+                // <li key={i}>{e}<button style={{margin: "20px"}} onClick={() => this.deleteTodo(i)} >X</button></li>
+                <SingleTodo todo={e} delete={() => this.deleteTodo(i)} />
             );
         });
 
@@ -54,6 +57,7 @@ class Todolist extends Component{
                     <button onClick={this.onClick}>Add</button>
 
         {this.state.todos.length === 0 ? "No Tasks Yet" : <ul>{bulletedtodos}</ul>}
+
 
                 </div>
             </div>
