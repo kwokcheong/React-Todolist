@@ -24,7 +24,7 @@ class Number extends Component {
     render(){
       return (
         <div className="Number">
-                <div className="jumbotron jumbotron-fluid" >
+                <div className="jumbotron jumbotron-fluid" style={{backgroundColor:"white"}} >
             <div className="container">
               <h1 className="display-4">Number clicker</h1>
               <p className="lead">Heyhey press this button to add one!</p>

@@ -39,13 +39,13 @@ class Todolist extends Component{
 
         let bulletedtodos = this.state.todos.map((e,i) =>{
             return (
-                <li key={i}>{e}<button onClick={() => this.deleteTodo(i)} >X</button></li>
+                <li key={i}>{e}<button style={{margin: "20px"}} onClick={() => this.deleteTodo(i)} >X</button></li>
             );
         });
 
         return(
             <div className="Todolist">
-                <div className="jumbotron jumbotron-fluid" >
+                <div className="jumbotron jumbotron-fluid" style={{backgroundColor:"white"}} >
                     <div className="container">
                     <h1 className="display-4">To Do List</h1>
                     <p className="lead">Plan your day</p>
